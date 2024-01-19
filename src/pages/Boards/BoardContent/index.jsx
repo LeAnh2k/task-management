@@ -4,7 +4,7 @@ function BoardContent() {
   return (
     <Box sx={{
       backgroundColor: 'primary.main',
-      wight: '100%',
+      width: '100%',
       height: (theme) => `calc(100vh - ${theme.trello.appBarHeight} - ${theme.trello.boardBarHeight})`,
       display: 'flex',
       alignItems: 'center'
