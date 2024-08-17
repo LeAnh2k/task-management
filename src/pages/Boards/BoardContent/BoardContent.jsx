@@ -11,10 +11,10 @@ import {
   useSensors,
   DragOverlay,
   defaultDropAnimationSideEffects,
-  closestCenter,
+  // closestCenter,
   closestCorners,
   pointerWithin,
-  rectIntersection,
+  // rectIntersection,
   getFirstCollision
 } from '@dnd-kit/core'
 import { arrayMove } from '@dnd-kit/sortable'
@@ -23,6 +23,7 @@ import Column from './ListColumns/Column/Column'
 import Card from './ListColumns/Column/ListCards/Card/Card'
 import { cloneDeep, isEmpty } from 'lodash'
 import { generatePlaceholderCard } from './../../../utils/formatters'
+
 const ACTIVE_DRAG_ITEM_TYPE = {
   COLUMN: 'ACTIVE_DRAG_ITEM_TYPE_COLUMN',
   CARD: 'ACTIVE_DRAG_ITEM_TYPE_CARD'
@@ -144,7 +145,7 @@ function BoardContent({ board }) {
   const handleDragOver = (event) => {
     // console.log("handleDragOver")
 
-  // Không làm gì thêm nếu đang kéo Column
+    // Không làm gì thêm nếu đang kéo Column
     if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.COLUMN) return
     // Còn nếu kéo card thì xử lý thêm để có thể kéo card giữa các Columns
     // console.log('handleDragOver: ', event)
